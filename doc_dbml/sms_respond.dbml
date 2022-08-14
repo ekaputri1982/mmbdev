@@ -1,0 +1,6 @@
+Table "sms_respond" {
+  "sukses" VARCHAR(160) [not null]
+  "email" VARCHAR(160) [not null]
+  "nomor" VARCHAR(160) [not null]
+  "lain" VARCHAR(160) [not null]
+}

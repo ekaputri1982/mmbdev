@@ -1,0 +1,12 @@
+Table "fbinvite" {
+  "uid" BIGINT(15) [not null]
+  "date" DATETIME [not null]
+  "name" VARCHAR(50) [not null]
+  "url" VARCHAR(50) [not null]
+  "pp" VARCHAR(255) [not null]
+  "friends" INT(11) [not null]
+
+Indexes {
+  (date, uid) [pk]
+}
+}

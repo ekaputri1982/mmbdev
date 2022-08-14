@@ -1,0 +1,23 @@
+Table "deposit_fx" {
+  "id" INT(10) [pk, not null, increment]
+  "user_id" INT(5) [not null]
+  "platid" VARCHAR(10) [not null]
+  "user_bankname" VARCHAR(100) [not null]
+  "user_bankaccno" VARCHAR(20) [not null]
+  "user_bankreg" VARCHAR(100) [not null]
+  "nominal" DECIMAL(15,2) [not null]
+  "plat_bankname" VARCHAR(100) [not null]
+  "plat_bankaccno" VARCHAR(20) [not null]
+  "plat_bankreg" VARCHAR(100) [not null]
+  "time" INT(10) [not null]
+  "tipe" TINYINT(1) [not null, default: "0"]
+  "cashier" TINYINT(1) [not null, default: "0"]
+  "settle" TINYINT(1) [not null, default: "0"]
+  "paytime" INT(10) [not null]
+  "paid" INT(1) [not null, default: "0"]
+  "floating" INT(1) [not null, default: "0"]
+
+Indexes {
+  user_id [name: "user_id"]
+}
+}

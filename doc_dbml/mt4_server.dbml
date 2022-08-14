@@ -1,0 +1,12 @@
+Table "mt4_server" {
+  "id" TINYINT(1) [pk, not null, increment]
+  "real" TINYINT(1) [not null, default: "0"]
+  "ipaddress" VARCHAR(15) [not null]
+  "type" VARCHAR(10) [not null]
+  "active" TINYINT(1) [not null, default: "0"]
+
+Indexes {
+  real [name: "real"]
+  active [name: "active"]
+}
+}

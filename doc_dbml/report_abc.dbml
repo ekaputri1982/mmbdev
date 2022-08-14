@@ -1,0 +1,8 @@
+Table "report_abc" {
+  "user_name" VARCHAR(20) [not null]
+  "datetime" VARCHAR(25) [not null]
+  "action" VARCHAR(25) [not null]
+  "ip" VARCHAR(15) [not null]
+  "browser" VARCHAR(255) [not null]
+}
+

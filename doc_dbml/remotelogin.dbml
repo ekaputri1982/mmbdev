@@ -1,0 +1,10 @@
+Table "remotelogin" {
+  "platid" VARCHAR(10) [not null]
+  "access_token" VARCHAR(32) [not null]
+  "ip_address" VARCHAR(15) [not null]
+  "time" INT(10) [not null]
+
+Indexes {
+  access_token [unique, name: "access_token"]
+}
+}

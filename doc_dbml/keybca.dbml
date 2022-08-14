@@ -1,0 +1,4 @@
+Table "keybca" {
+  "klikPayCode" VARCHAR(10) [not null]
+  "clearKey" VARCHAR(16) [not null]
+}

@@ -1,0 +1,14 @@
+Table "account_marketing" {
+  "acc" VARCHAR(20) [not null]
+  "platform" VARCHAR(10) [not null, default: "mt4"]
+  "marketing" INT(11) [not null, default: "0", note: 'follow-up']
+  "active" DATETIME [not null]
+  "chop" DATETIME [not null, default: "1970-01-01 00:00:00"]
+  "lastmodified" INT(11) [not null]
+  "modifiedby" INT(11) [not null, default: "0"]
+
+Indexes {
+  acc [name: "mt4acc"]
+  marketing [name: "marketing"]
+}
+}

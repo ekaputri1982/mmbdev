@@ -1,0 +1,6 @@
+Table "countrylist" {
+  "country_id" INT(3) [pk, not null, increment]
+  "country_name" VARCHAR(100) [not null]
+  "country_abbrv" VARCHAR(2) [not null]
+  "curr_id" INT(5) [not null]
+}

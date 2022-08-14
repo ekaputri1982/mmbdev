@@ -1,0 +1,19 @@
+Table "demo_contest_2013_2" {
+  "user_id" INT(5) [not null]
+  "user_mt4id" BIGINT(15) [not null]
+  "password" VARCHAR(8) [not null]
+  "mail_sent" INT(1) [not null, default: "0"]
+  "time" INT(10) [not null]
+  "alm_rumah1" VARCHAR(50) [not null]
+  "alm_rumah2" VARCHAR(50) [not null]
+  "alm_rumah3" VARCHAR(50) [not null]
+  "kode_pos_rumah" INT(9) [not null]
+  "no_hp" BIGINT(15) [not null]
+  "nama_bank" VARCHAR(50) [not null]
+  "no_acc_bank" VARCHAR(20) [not null]
+  "atas_nama_bank" VARCHAR(50) [not null]
+
+Indexes {
+  user_id [name: "user_id"]
+}
+}

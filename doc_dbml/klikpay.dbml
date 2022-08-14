@@ -1,0 +1,10 @@
+Table "klikpay" {
+  "trans_no" INT(11) [pk, not null, increment]
+  "user_id" INT(5) [not null]
+  "platid" VARCHAR(10) [not null]
+  "nominal" INT(12) [not null]
+  "submit_time" DATETIME [not null]
+  "payment_time" DATETIME [not null]
+  "deposit_id" INT(10) [not null]
+  "status" TINYINT(1) [not null, default: "0"]
+}

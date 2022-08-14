@@ -1,0 +1,5 @@
+Table "autoupdate" {
+  "user_email" VARCHAR(50) [pk, not null]
+  "update_time" INT(10) [not null]
+  "user_referrer_id" INT(5) [not null, default: "0"]
+}

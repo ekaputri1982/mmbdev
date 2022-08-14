@@ -1,0 +1,22 @@
+Table "users_platid" {
+  "order_no" VARCHAR(22) [pk, not null]
+  "order_time" INT(10) [not null]
+  "order_status" SMALLINT(1) [not null, default: "1", note: '2=quickreg, 3=form pbk03, 4=verified (compliance), 5=approved  (settlement), 6=refused (settlement)']
+  "user_id" INT(5) [not null]
+  "user_platid" VARCHAR(10) [default: NULL]
+  "indeks_platid" VARCHAR(10) [default: NULL]
+  "forex" TINYINT(1) [not null, default: "0"]
+  "indeks" TINYINT(1) [not null, default: "0"]
+  "time" INT(10) [not null, default: `unix_timestamp()`]
+  "demo_forex" VARCHAR(10) [default: NULL]
+  "demo_index" VARCHAR(10) [default: NULL]
+  "account" SMALLINT(1) [not null, default: "0", note: '0 : Gold / Mini AskapSocial - 1 : Platinum / Reguler AskapSocial - 2 : Multilateral - 3 : Silver / Mini AskapFX']
+  "platform" TINYINT(1) [not null, default: "0"]
+  "verifiedBy" INT(11) [default: NULL]
+
+Indexes {
+  user_id [name: "user_id"]
+  user_platid [name: "user_platid"]
+  indeks_platid [name: "indeks_platid"]
+}
+}

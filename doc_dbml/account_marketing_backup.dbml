@@ -1,0 +1,9 @@
+Table "account_marketing_backup" {
+  "acc" INT(11) [not null]
+  "platform" VARCHAR(10) [not null, default: "mt4"]
+  "marketing" INT(11) [not null, default: "0"]
+  "maintenance" INT(11) [not null, default: "0"]
+  "active" TINYINT(4) [not null]
+  "lastmodified" INT(11) [not null]
+  "modifiedby" INT(11) [not null, default: "0"]
+}
