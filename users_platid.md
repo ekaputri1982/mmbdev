@@ -1,0 +1,33 @@
+Table : users_platid
+--------------------
+
+```SQL
+USE mmbdev
+
+CREATE TABLE `users_platid` (
+	`order_no` VARCHAR(22) NOT NULL COLLATE 'latin1_swedish_ci',
+	`order_time` INT(10) NOT NULL,
+	`order_status` SMALLINT(1) NOT NULL DEFAULT '1' COMMENT '2=quickreg, 3=form pbk03, 4=verified (compliance), 5=approved  (settlement), 6=refused (settlement)',
+	`user_id` INT(5) NOT NULL,
+	`user_platid` VARCHAR(10) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`indeks_platid` VARCHAR(10) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`forex` TINYINT(1) NOT NULL DEFAULT '0',
+	`indeks` TINYINT(1) NOT NULL DEFAULT '0',
+	`time` INT(10) NOT NULL DEFAULT unix_timestamp(),
+	`demo_forex` VARCHAR(10) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`demo_index` VARCHAR(10) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`account` SMALLINT(1) NOT NULL DEFAULT '0' COMMENT '0 : Gold / Mini AskapSocial - 1 : Platinum / Reguler AskapSocial - 2 : Multilateral - 3 : Silver / Mini AskapFX',
+	`platform` TINYINT(1) NOT NULL DEFAULT '0',
+	`verifiedBy` INT(11) NULL DEFAULT NULL,
+	PRIMARY KEY (`order_no`) USING BTREE,
+	INDEX `user_id` (`user_id`) USING BTREE,
+	INDEX `user_platid` (`user_platid`) USING BTREE,
+	INDEX `indeks_platid` (`indeks_platid`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=MyISAM
+;
+```
+__Notes__
+
++ Table
